@@ -17,7 +17,6 @@ Network migrations in large enterprises often fail due to:
 This platform solves that by providing automated validation, structured reporting, and severity-based risk detection.
 
 ---
-
 ## Architecture
 This project follows a modular enterprise architecture:
 
@@ -29,10 +28,18 @@ This project follows a modular enterprise architecture:
 - docker/ → Containerized deployment
 
 ---
+```markdown id="arch_portfolio"
 ## Architecture Diagram
-<img width="675" height="175" alt="4" src="https://github.com/user-attachments/assets/bce9a12c-360f-4919-9097-8f329df25745" />
 
+CLI Devices ───────┐
+                   ├──> Normalization Layer ──> Validation Engine ──> Report
+Cisco DNA Center ──┘
 
+                     ↓
+              Async Orchestrator
+                     ↓
+              FastAPI Interface
+```
 ---
 ## Technologies
 - Python
@@ -74,3 +81,23 @@ http://localhost:8000/docs
 ```bash
 python main.py --mode cli
 ```
+###Output
+- JSON validation report
+- HTML executive report
+- Structured logs
+---
+###Example Use Case
+Used during enterprise network migrations to validate infrastructure consistency across:
+- Core switches
+- Distribution layers
+- Controller-managed networks (Cisco DNA Center)
+
+---
+###Future Enhancements
+- Real-time streaming validation
+- Kubernetes deployment
+- Event-driven architecture (Kafka)
+- Full dashboard UI
+---
+###Author
+Network Automation & Consulting Engineer
