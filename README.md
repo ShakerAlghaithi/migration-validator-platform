@@ -27,17 +27,11 @@ This platform solves that by providing automated validation, structured reportin
 - Async Orchestrator (scalable execution)
 - Reporting Engine (JSON + HTML output)
 
+
 ---
 ## Architecture Diagram
+<img width="675" height="175" alt="4" src="https://github.com/user-attachments/assets/bce9a12c-360f-4919-9097-8f329df25745" />
 
-CLI Devices ───────┐
-                   ├──> Normalization Layer ──> Validation Engine ──> Report
-Cisco DNA Center ──┘
-
-                     ↓
-              Async Orchestrator
-                     ↓
-              FastAPI Interface
 
 ---
 ## Technologies
@@ -70,12 +64,13 @@ Cisco DNA Center ──┘
 ## How to Run
 
 ### API Mode
-</> bash 
+```bash
 python main.py --mode api
-
+```
 Then access:
 http://localhost:8000/docs
 
 ### CLI Mode
 ```bash
 python main.py --mode cli
+```
