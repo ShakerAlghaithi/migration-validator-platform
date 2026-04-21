@@ -19,14 +19,14 @@ This platform solves that by providing automated validation, structured reportin
 ---
 
 ## Architecture
+This project follows a modular enterprise architecture:
 
-- CLI Collector (device-level state via SSH)
-- DNA Center Collector (controller-based state)
-- Normalization Layer (structured state conversion)
-- Validation Engine (rule-based comparison)
-- Async Orchestrator (scalable execution)
-- Reporting Engine (JSON + HTML output)
-
+- collectors/ → Multi-source data acquisition (CLI + Cisco DNA Center)
+- normalization/ → Structured transformation of raw network data
+- core/ → Orchestration, comparison, and reporting logic
+- validators/ → Rule-based validation engine
+- ci-cd/ → Automated pipeline integration
+- docker/ → Containerized deployment
 
 ---
 ## Architecture Diagram
